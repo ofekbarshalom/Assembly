@@ -1,4 +1,4 @@
-li $s6, 324161421 # Load the ID into $s6
+li $s6, 111111111 # Load the ID into $s6
 
 andi $t0, $s6, 0xF # Extract the LSB of the ID
 
