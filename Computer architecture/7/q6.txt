@@ -1,0 +1,8 @@
+sll $t0, $s1, 0x8      # Shift $s1 left by 8 bits
+add $t1, $t0, $s0      # $t1 = $t0 + $s0
+sw $s3, FFFC($t2)      # Mem[$t2 + 0xFFFC] = $s3
+bne $t1, $t7, 0x4      # go to PC + 8 if $t1 != $t7.
+sub $t5, $t3, $s6      # $t5 = $t3 - $s6
+lw $t0, 4($s4)         # $t0 = Mem[$s4 + 0x0004]
+J 0x100003             # Jump to the address 0x0100003
+beq $t0, $s1, 0xFFF8   # go to PC + 4 + 0xFFF8 if $t0 == $s1
